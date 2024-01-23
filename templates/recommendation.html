@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Music Recommendation</title>
+</head>
+<body>
+    <h2>Recommended Songs</h2>
+    <div class="recommendations">
+        {% for name, poster in names_and_posters %}
+            <div class="recommendation">
+                <p>{{ name }}</p>
+                <img src="{{ poster }}" alt="{{ name }} poster">
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

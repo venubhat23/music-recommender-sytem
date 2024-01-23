@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Music Recommender System</title>
+</head>
+<body>
+    <h1>Music Recommender System</h1>
+    <form action="/recommendation" method="post">
+        <label for="selected_song">Select a song:</label>
+        <select name="selected_song" id="selected_song">
+            {% for song in music_list %}
+                <option value="{{ song }}">{{ song }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Show Recommendation">
+    </form>
+</body>
+</html>
