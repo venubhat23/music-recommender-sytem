@@ -5,8 +5,8 @@ import spotipy
 
 app = Flask(__name__)
 
-CLIENT_ID = "yourclientid"
-CLIENT_SECRET = "yourclient_secreatid"
+CLIENT_ID = "YOUR_CLIENT_ID"
+CLIENT_SECRET = "YOUR_CLIENT_SECRET"
 
 # Initialize the Spotify client
 client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
