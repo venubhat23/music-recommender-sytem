@@ -10,14 +10,20 @@
 <body>
     <h1>Music Recommender System</h1>
     <form action="/recommendation" method="post">
-        <label for="selected_song">Select a song:</label>
-        <select name="selected_song" id="selected_song">
-            {% for song in music_list %}
-                <option value="{{ song }}">{{ song }}</option>
-            {% endfor %}
-        </select>
+        <div class="sel">
+            <label for="selected_song">Select a song:</label>
+            <select name="selected_song" id="selected_song">
+                {% for song in music_list %}
+                    <option value="{{ song }}">{{ song }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
         <br>
-        <input type="submit" value="Show Recommendation">
+        <div class="sub">
+            <input type="submit" value="Show Recommendation">
+        </div>
+
     </form>
 </body>
 </html>
